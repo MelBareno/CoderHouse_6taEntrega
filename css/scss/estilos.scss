@@ -168,11 +168,6 @@ p,{
         width         : 100%;
         padding-left  : 6vw;
         padding-right : 6vw;
-    
-     .row {
-        padding-left  : 0;
-        padding-right : 0;
-    }
 }
 
     .mob-1 {
@@ -225,63 +220,30 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6
- {
+h6,{
     font-family            : var(--font-2);
     font-weight            : 500;
     color                  : var(--color-text-dark);
  }
 
-h1,
-.h1 {
+h1{
     font-size      : var(--text-display-2);
     line-height    : calc(2.25 * var(--space));
     letter-spacing : -0.015em;
 }
 
-h2,
-.h2 {
+h2{
     font-size      : var(--text-xl);
     line-height    : calc(1.375 * var(--space));
     letter-spacing : -0.01em;
 }
 
-h3,
-.h3 {
+h3{
     font-size   : var(--text-md);
     line-height : var( --vspace-1);
 }
 
-h4,
-.h4 {
-    font-size   : var(--text-lg);
-    line-height : var(--vspace-1);
-}
-
-h5,
-.h5 {
-    font-size   : var(--text-md);
-    line-height : var(--vspace-0_875);
-}
-
-h6,
-.h6 {
-    font-family    : var(--font-1);
-    font-weight    : 600;
-    font-size      : var(--text-sm);
-    line-height    : var(--vspace-0_75);
-    text-transform : uppercase;
-    letter-spacing : 0.3rem;
-}
-
-/* figures
- */
+/* figures*/
 figure img,
 p img {
     margin         : 0;
@@ -319,9 +281,7 @@ img,
 }
 
 /* ===================================================================
- * # FORM
- *
- *
+ * # FORM*
  * ------------------------------------------------------------------- */
  fieldset {
     border  : none;
@@ -453,17 +413,7 @@ input[type="button"]:hover {
  * ## media classes
  * ------------------------------------------------------------------- */
 
- /* floated image
- */
-img.u-pull-right {
-    margin : var(--vspace-0_5) 0 var(--vspace-0_5) var(--vspace-0_875);
-}
-
-img.u-pull-left {
-    margin : var(--vspace-0_5) var(--vspace-0_875) var(--vspace-0_5) 0;
-}
-
-/* responsive video container
+ /* responsive video container
  */
 .video-container {
     --aspect-ratio : 16/9;
@@ -549,4 +499,3 @@ footer {
     color            : rgba(255, 255, 255, 0.4);
     position         : relative;
 }
-
