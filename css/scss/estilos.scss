@@ -5,24 +5,18 @@
  * # LINKS
  * # NORMALIZE
  * # BASE SETUP
- * # GRID
  * # TYPOGRAPHY 
  *      ## base type styles
  *      ## spacing
- * # BUTTONS
- * # PROJECT-WIDE SHARED STYLES
- *      ## theme-specific typography classes
- *      ## media classes
  * # SITE HEADER
- *      ## logo
- *      ## main navigation
- *      ## button
  * # FOOTER
  *------------------------------------------------------------------ */
 
 /* LINKS--- */
 @import "settings";
 @import "grilla";
+@import "buttons";
+@import "forms";
 
 /* ====================================================================
  * # NORMALIZE
@@ -155,7 +149,7 @@ h4,
 h5,
 h6,
 form,
-p,{
+p{
     margin  : 0;
     padding : 0;
 }
@@ -170,11 +164,7 @@ p,{
         padding-right : 6vw;
 }
 
-    .mob-1 {
-        flex  : none;
-        width : 8.33333%;
-    }
-    
+   
 }
 @media screen and (min-width: 992px) {
     #grilla {
@@ -220,7 +210,7 @@ h2,
 h3,
 h4,
 h5,
-h6,{
+h6{
     font-family            : var(--font-2);
     font-weight            : 500;
     color                  : var(--color-text-dark);
@@ -280,118 +270,7 @@ img,
     margin-bottom : var(--vspace-1);
 }
 
-/* ===================================================================
- * # FORM*
- * ------------------------------------------------------------------- */
- fieldset {
-    border  : none;
-    padding : 0;
-}
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="password"],
-textarea,
-select {
-    --input-vpadding    : calc(((var(--input-height) - var(--input-line-height)) / 2) - 1px);
-    display             : block;
-    height              : var(--input-height);
-    padding             : var(--input-vpadding) calc(2.4rem - 1px);
-    border              : 0;
-    outline             : 0;
-    color               : var(--color-placeholder);
-    font-family         : var(--font-1);
-    font-size           : var(--text-sm);
-    font-size           : calc(var(--text-xs) * 0.8889);
-    line-height         : var(--input-line-height);
-    max-width           : 100%;
-    background-color    : var(--color-gray-5);
-    border              : 1px solid transparent;
-    transition          : all 0.3s ease-in-out;
-    border-radius       : var(--border-radius);
-}
-
-textarea {
-    min-height : calc(8 * var(--space));
-}
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-    color            : var(--color-black);
-    background-color : white;
-    box-shadow       : 0 0 5px var(--color-1);
-    border           : 1px solid var(--color-1-light);
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display : inline;
-}
-
-label>input[type="checkbox"],
-label>input[type="radio"] {
-    margin   : 0;
-    position : relative;
-    top      : 2px;
-}
-/* ===================================================================
- * # BUTTONS
- ------------------------------------------------------------------- */
-.btn,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-    --btn-height            : var(--vspace-btn);
-    display                 : inline-block;
-    font-family             : var(--font-1);
-    font-weight             : 500;
-    font-size               : var(--text-size);
-    letter-spacing          : 0.02em;
-    height                  : var(--btn-height);
-    line-height             : calc(var(--btn-height) - 4px);
-    padding                 : 0 3.6rem;
-    margin                  : 0 0.4rem var(--vspace-0_5) 0;
-    color                   : var(--color-btn-text);
-    text-decoration         : none;
-    text-align              : center;
-    white-space             : nowrap;
-    cursor                  : pointer;
-    transition              : all 0.3s;
-    border-radius           : var(--border-radius);
-    background-color        : var(--color-btn);
-    border                  : 2px solid var(--color-btn);
-   }
-
-.btn:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus,
-.btn:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-    background-color : var(--color-btn-hover);
-    border-color     : var(--color-btn-hover);
-    color            : var(--color-btn-hover-text);
-    outline          : 0;
-}
-
-/* ------------------------------------------------------------------- 
- * ## theme-specific typography classes
- * ------------------------------------------------------------------- */
+/* ## theme-specific typography classes- */
 .body-text-2 {
     font-size   : calc(var(--text-size)*1.1) ;
     line-height : calc(0.9375 * var(--space));
@@ -413,8 +292,7 @@ input[type="button"]:hover {
  * ## media classes
  * ------------------------------------------------------------------- */
 
- /* responsive video container
- */
+ /* responsive video container */
 .video-container {
     --aspect-ratio : 16/9;
     position       : relative;
@@ -422,8 +300,6 @@ input[type="button"]:hover {
     overflow       : hidden;
     padding-bottom : calc(100% / (var(--aspect-ratio)));
 
-    iframe,
-    object,
     embed,
     video {
         position : absolute;

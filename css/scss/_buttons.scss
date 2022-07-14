@@ -1,0 +1,43 @@
+/* BUTTONS */
+ .btn,
+ button,
+ input[type="submit"],
+ input[type="reset"],
+ input[type="button"] {
+     --btn-height            : var(--vspace-btn);
+     display                 : inline-block;
+     font-family             : var(--font-1);
+     font-weight             : 500;
+     font-size               : var(--text-size);
+     letter-spacing          : 0.02em;
+     height                  : var(--btn-height);
+     line-height             : calc(var(--btn-height) - 4px);
+     padding                 : 0 3.6rem;
+     margin                  : 0 0.4rem var(--vspace-0_5) 0;
+     color                   : var(--color-btn-text);
+     text-decoration         : none;
+     text-align              : center;
+     white-space             : nowrap;
+     cursor                  : pointer;
+     transition              : all 0.3s;
+     border-radius           : var(--border-radius);
+     background-color        : var(--color-btn);
+     border                  : 2px solid var(--color-btn);
+    }
+ 
+ .btn:focus,
+ button:focus,
+ input[type="submit"]:focus,
+ input[type="reset"]:focus,
+ input[type="button"]:focus,
+ .btn:hover,
+ button:hover,
+ input[type="submit"]:hover,
+ input[type="reset"]:hover,
+ input[type="button"]:hover {
+     background-color : var(--color-btn-hover);
+     border-color     : var(--color-btn-hover);
+     color            : var(--color-btn-hover-text);
+     outline          : 0;
+ }
+ 
